@@ -1,0 +1,35 @@
+exam@debian:~/sales/Location2$ cat pur1 pur2>>pur3
+exam@debian:~$ cp sales/Location2/pur3 ~/sales/Location3/stock3
+exam@debian:~/sales/Location3$ chmod a+rwx stock3
+exam@debian:~/sales/Location3$ head -n 10 stock1
+exam@debian:~/sales/Location3$ ls -l
+
+
+
+SHELL SCRIPT
+
+echo -e "Menu \n 1.volume of  sphere \n 2.volume of cube \n 3.volume of cylinder"
+echo "enter the choice"
+read ch
+case $ch in
+    1)echo "enter the radius"
+      read r
+      c=`expr 4 / 3`
+      e=`expr $r \* $r \* $r`
+      b=`expr $c \* $e \*  22`
+      d=`expr $b / 7`
+      echo "volume of sphere is : $d" ;;
+    2)echo "enter the side "
+      read s
+      c=`expr $s \* $s \* $s`
+      echo "volume of cubeis :$c" ;;
+    3)echo "enter the radius"
+      read r
+      echo "enter the height"
+      read h
+      c=`expr $r \* $r \* $h \* 22`
+      d=`expr $c / 7`
+      echo "volume of cylinder is :$d" ;;
+    
+esac
+
